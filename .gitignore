@@ -1,0 +1,10 @@
+*.class
+*.pyc
+*.pyo
+.svn
+_svn
+.project
+.pydevproject
+.settings
+logs/client.log
+logs/server.log
