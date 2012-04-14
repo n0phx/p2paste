@@ -30,8 +30,7 @@ The pasting part which is the primary functionality of the application, uses a s
 
 [ Todo ]
 
-I'm sure there are some uncovered cases, some of which I'm already aware of, but please report any issues
-you find, I plan to fix them.
+I'm sure there are some uncovered cases, some of which I'm already aware of, but please report any issues you find, I plan to fix them.
 There's the idea of sending files, although it's a questionable feature, as it may be better if you upload them somewhere, and just share the links. Another one was to allow connecting to multiple servers, create chatrooms (irc clone?), but that's again a possible overkill, like reinventing the wheel. So until we justify better the need for these features, they won't be implemented.
 
 
