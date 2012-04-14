@@ -4,18 +4,13 @@ p2paste [ v0.1 ]
 [ About ]
 
 It's a kind of a chat application, with a common "blackboard" for all participants.
-Primarly created for my own needs, as I often share code pieces in my local dev environment between
-my notebook and pc, and got tired of constantly opening pastebin or sending a source file.
-But as it became a trend, I felt that I have to share it with the world just as many others do.
+Primarly created for my own needs, as I often share code pieces in my local dev environment between my notebook and pc, and got tired of constantly opening pastebin or sending a source file. But as it became a trend, I felt that I have to share it with the world just as many others do.
 
 
 [ Requirements ]
 
-Written in python 2.7, although should be compatible with older 2.x versions also, but it's not tested.
-Successfully tested on Ubuntu oneiric and Windows XP, both with Python 2.7, but it requires OpenSSL.
-The gui part uses tkinter, as I wanted to avoid the requirement of additional extra packages/libraries,
-but as the gui part is separated from the rest of the code, I think if someone wants a qt or wxpython
-version, it should not cause much trouble.
+Written in python 2.7, although should be compatible with older 2.x versions also, but it's not tested. Successfully tested on Ubuntu oneiric and Windows XP, both with Python 2.7, but it requires OpenSSL.
+The gui part uses tkinter, as I wanted to avoid the requirement of additional extra packages/libraries, but as the gui part is separated from the rest of the code, I think if someone wants a qt or wxpython version, it should not cause much trouble.
 
 
 [ Usage ]
@@ -23,31 +18,21 @@ version, it should not cause much trouble.
 To start the application, simply execute start.py
 The settings.py module contains some basic parameters which you can configure to your own needs of course.
 
-The communication is encrypted with TLS by default, but can be changed. There is a default certificate/key
-file in the certificates folder, which I created so that it can be tested without tinkering around it, but
-you may create your own certificate and key files like this:
+The communication is encrypted with TLS by default, but can be changed. There is a default certificate/key file in the certificates folder, which I created so that it can be tested without tinkering around it, but you may create your own certificate and key files like this:
 
     openssl req -new -x509 -days 365 -nodes -out cert.pem -keyout cert.pem
 
 
 [ Functionalities ]
 
-The pasting part which is the primary functionality of the application, uses a simple queue mechanism. When
-a client clicks on the request button, the server will place the client's request in the waiting queue.
-Every client will get the same time to paste something and send it (the time is specified in the settings module).
-If the time runs out and the paste was not sent by the client, the server will ignore that client, and give
-the paste permission to the next client in the queue.
+The pasting part which is the primary functionality of the application, uses a simple queue mechanism. When a client clicks on the request button, the server will place the client's request in the waiting queue. Every client will get the same time to paste something and send it (the time is specified in the settings module). If the time runs out and the paste was not sent by the client, the server will ignore that client, and give the paste permission to the next client in the queue.
 
 
 [ Todo ]
 
 I'm sure there are some uncovered cases, some of which I'm already aware of, but please report any issues
 you find, I plan to fix them.
-There's the idea of sending files, although it's a questionable feature, as it may be better if you upload
-them somewhere, and just share the links.
-Another one was to allow connecting to multiple servers, create chatrooms (irc clone?), but that's again
-a possible overkill, like reinventing the wheel. So until we justify better the need for these features,
-they won't be implemented.
+There's the idea of sending files, although it's a questionable feature, as it may be better if you upload them somewhere, and just share the links. Another one was to allow connecting to multiple servers, create chatrooms (irc clone?), but that's again a possible overkill, like reinventing the wheel. So until we justify better the need for these features, they won't be implemented.
 
 
 [ License ]
